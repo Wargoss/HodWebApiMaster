@@ -1,0 +1,34 @@
+﻿@model HodApiFront.Models.MapCombatTurn
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MapCombatTurn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Combat.CombatId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Combat.CombatId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Turn.TurnId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Turn.TurnId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MapCombatTurnId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

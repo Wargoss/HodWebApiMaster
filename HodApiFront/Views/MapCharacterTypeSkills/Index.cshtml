@@ -1,0 +1,46 @@
+﻿@model IEnumerable<HodApiFront.Models.MapCharacterTypeSkill>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+        background-color: #808080;
+        color: white;
+    }
+</style>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CharacterType.CharacterClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skill.SkillText)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CharacterType.CharacterClass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Skill.SkillText)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MapCharacterTypeSkillId }, new { @class = "btn btn-primary btn-xs" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MapCharacterTypeSkillId }, new { @class = "btn btn-primary btn-xs" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MapCharacterTypeSkillId }, new { @class = "btn btn-danger btn-xs" })
+        </td>
+    </tr>
+}
+
+</table>

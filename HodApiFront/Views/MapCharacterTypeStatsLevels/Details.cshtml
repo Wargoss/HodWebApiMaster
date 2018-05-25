@@ -1,0 +1,34 @@
+﻿@model HodApiFront.Models.MapCharacterTypeStatsLevel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MapCharacterTypeStatsLevel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CharacterType.CharacterClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CharacterType.CharacterClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatsLevel.CharacterClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatsLevel.CharacterClass)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MapCharacterTypeStatsLevelId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

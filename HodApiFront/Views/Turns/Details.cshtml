@@ -1,0 +1,66 @@
+﻿@model HodApiFront.Models.Turn
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Turn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Player1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Player1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Player2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Player2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TurnNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TurnNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivePlayer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActivePlayer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SkillId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SkillId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Damage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Damage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TurnId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

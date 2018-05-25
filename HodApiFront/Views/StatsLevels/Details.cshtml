@@ -1,0 +1,58 @@
+﻿@model HodApiFront.Models.StatsLevel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StatsLevel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CharacterClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CharacterClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Int)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Int)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Str)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Str)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Res)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Res)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StatsLevelId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<HodApiFront.Models.Turn>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Player1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Player2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TurnNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActivePlayer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SkillId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Damage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Player1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Player2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TurnNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActivePlayer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SkillId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Damage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TurnId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TurnId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TurnId })
+        </td>
+    </tr>
+}
+
+</table>

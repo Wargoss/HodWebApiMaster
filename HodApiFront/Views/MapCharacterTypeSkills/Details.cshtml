@@ -1,0 +1,34 @@
+﻿@model HodApiFront.Models.MapCharacterTypeSkill
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MapCharacterTypeSkill</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CharacterType.CharacterClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CharacterType.CharacterClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skill.SkillText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Skill.SkillText)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MapCharacterTypeSkillId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

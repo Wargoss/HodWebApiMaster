@@ -1,0 +1,83 @@
+﻿@model IEnumerable<HodApiFront.Models.Character>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+        background-color: #808080;
+        color: white;
+    }
+</style>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CharacterType.CharacterClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skill1Unlock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skill2Unlock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skill3Unlock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skill4Unlock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skill5Unlock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skill6Unlock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Level)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CharacterType.CharacterClass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Skill1Unlock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Skill2Unlock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Skill3Unlock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Skill4Unlock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Skill5Unlock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Skill6Unlock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CharacterId }, new { @class = "btn btn-primary btn-xs" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CharacterId }, new { @class = "btn btn-primary btn-xs" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CharacterId }, new { @class = "btn btn-danger btn-xs" })
+            </td>
+        </tr>
+    }
+
+</table>

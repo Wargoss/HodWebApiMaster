@@ -1,0 +1,65 @@
+﻿@model IEnumerable<HodApiFront.Models.StatsLevel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+        background-color: #808080;
+        color: white;
+    }
+</style>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CharacterClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Int)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Str)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Res)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CharacterClass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Int)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Str)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Res)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.StatsLevelId }, new { @class = "btn btn-primary btn-xs" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.StatsLevelId }, new { @class = "btn btn-primary btn-xs" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.StatsLevelId }, new { @class = "btn btn-danger btn-xs" })
+            </td>
+        </tr>
+    }
+
+</table>
