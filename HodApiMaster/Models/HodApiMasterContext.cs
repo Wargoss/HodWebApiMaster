@@ -7,10 +7,10 @@ using System.Web;
 
 namespace HodApiMaster.Models
 {
-    //public class HodApiMasterContext : DbContext : IdentityDbContext<IdentityUser>
+    //public class HodApiMasterContext : DbContext ; IdentityDbContext<IdentityUser> ; base("name=HodApiMasterContext")
     public class HodApiMasterContext : IdentityDbContext<IdentityUser>
     {
-        public HodApiMasterContext() : base("name=HodApiMasterContext")
+        public HodApiMasterContext() : base("HodApiMasterContext")
         {
         }
 
